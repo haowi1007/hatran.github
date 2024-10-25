@@ -97,6 +97,7 @@
                 foreach ($data as $record) {
                 $title = $record['title'];
                 $content = $record['content'];
+                $ImageURL=$record['ImageURL'];
 
                 // Test title có tồn tại ko
                 $checkQuery = "SELECT COUNT(*) as count FROM record WHERE title='$title'";
@@ -104,7 +105,7 @@
                 $row = $result->fetch_assoc();
 
                 if ($row['count'] == 0) {
-                $insertQuery = "INSERT INTO record (title, content) VALUES ('$title', '$content')";
+                $insertQuery = "INSERT INTO record (title, content, ImageURL) VALUES ('$title', '$content','$ImageURL')";
                  if ($conn->query($insertQuery) === TRUE) {
                 $successfulInserts++;
                 } else {
