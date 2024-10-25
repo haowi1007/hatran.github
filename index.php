@@ -79,8 +79,8 @@
                     // 2. Insert dữ liệu vào database. Chú ý: nếu bản ghi có Title đã tồn tại thì bỏ qua bản ghi đó
                    
                     $servername = "localhost";
-                    $username = "username";
-                    $password = "password";
+                    $username = "root";
+                    $password = "";
                     $dbname = "db_tran_thu_ha";
 
                 // tạo connect
